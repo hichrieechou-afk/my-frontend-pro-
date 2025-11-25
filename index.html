@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend متقدم + React</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>تطبيق Frontend + React متقدم</h1>
+
+    <!-- زر JavaScript عادي -->
+    <button id="jsAlertBtn">اضغط هنا (JS)</button>
+
+    <!-- زر الوضع الليلي -->
+    <button id="darkModeBtn">تبديل الوضع الليلي</button>
+
+    <!-- مكون React -->
+    <div id="reactRoot"></div>
+  </div>
+
+  <!-- مكتبات React -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- كود React -->
+  <script src="App.js" type="text/javascript"></script>
+
+  <!-- JS عادي -->
+  <script>
+    document.getElementById("jsAlertBtn").onclick = () => {
+      alert("مرحباً! هذا تفاعل مع JavaScript مباشرة");
+    };
+
+    // الوضع الليلي
+    document.getElementById("darkModeBtn").onclick = () => {
+      document.body.classList.toggle("dark-mode");
+    };
+  </script>
+</body>
+</html>
